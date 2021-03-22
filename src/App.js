@@ -1,4 +1,5 @@
 import React from 'react'
+import SpeechList from './components/SpeechList';
 
 function App() {
   return (
@@ -6,6 +7,7 @@ function App() {
       <header className="App-header">
       
       </header>
+      <SpeechList />
     </div>
   );
 }

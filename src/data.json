@@ -1,19 +1,18 @@
-const speech = [
 
-    "Hola Romeo.",
-  
-  "Hola Julieta",
-  
-  "Te quiero, Romeo",
-  
-  "Y yo a ti Julieta",
-  
-  "Escaparnos a México",
-  
-  "Mejor no, no le caes bien a mi familia y si seguimos adelante con nuestro amor, esta historia acabará mal",
-  
-  "Pues vaya"
-  
-  ]
-
-  export default speech;
+[
+  {
+    "julieta": "Hola Romeo",
+    "romeo": "Hola Julieta"
+  },
+  {
+    "julieta": "Te quiero, Romeo",
+    "romeo": "Y yo a ti Julieta"
+  },
+  {
+    "julieta": "Escaparnos a México",
+    "romeo": "ejor no, no le caes bien a mi familia y si seguimos adelante con nuestro amor, esta historia acabará mal"
+  },
+  {
+    "julieta": "Pues vaya"
+  }
+]
