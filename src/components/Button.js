@@ -5,7 +5,7 @@ class Button extends React.Component {
 
     render() {
         const ButtonStyled = styled.button`
-        width: 49%;
+        width: calc(50% - 1px);
         height: 46px;
         font-weight: 600;
         cursor: pointer;
