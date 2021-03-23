@@ -4,9 +4,7 @@ import SpeechList from './components/SpeechList';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      
-      </header>
+      <h2>Romeo y Julieta</h2>
       <SpeechList />
     </div>
   );

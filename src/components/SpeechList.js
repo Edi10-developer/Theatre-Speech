@@ -1,36 +1,18 @@
-import React, {useState} from 'react';
-import Button from './Button'
-import data from '../data.json'
-//import data2 from '../data2.json.json'
+import React from 'react';
+import Exercise3 from './Exercise3'
+import Exercise4 from './Exercise4'
 
 const SpeechList = () => {
-    const [count, setCount]= useState(0)
 
-    const julieta = data.map(speechs => speechs.julieta)
-    const romeo = data.map(speechs => speechs.romeo)
-   
-    const [speech, setSpeech] = useState('')
-
-    for(let speech of julieta){}
-    //const newSpeech = () => setCount(count => count  + 1)
-    const newSpeech = () => setSpeech(speech => julieta.speech)
-    const oldSpeech = () => setCount(count => count - 1)
- 
-    //console.log(data2);
-    console.log(julieta);
-    
- return(
-     <div>
-     <Button 
-     title="Adelante" 
-     onClick={newSpeech}
-     />
-
-     <Button 
-     title="Atras"
-      onClick={oldSpeech}/>
-     </div>
- )
+    return (
+        <div>
+            <h4>Exercise 3</h4>
+            <Exercise3 />
+            <hr />
+            <h4>Exercise 4</h4>
+            <Exercise4 />
+        </div>
+    )
 }
 
 export default SpeechList;

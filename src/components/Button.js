@@ -19,8 +19,7 @@ class Button extends React.Component {
             <ButtonStyled
                 onClick={this.props.onClick}
                 value={this.props.value}>
-                {this.props.title}
-               
+                {this.props.title}   
             </ButtonStyled>
         )
     }
