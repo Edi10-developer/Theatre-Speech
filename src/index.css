@@ -19,3 +19,7 @@ code {
   font-style: italic;
   color:rgb(48, 46, 46)
 }
+
+hr{
+  margin: 4rem 3rem;
+}
