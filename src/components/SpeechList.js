@@ -6,10 +6,10 @@ const SpeechList = () => {
 
     return (
         <div>
-            <h4>Exercise 3</h4>
+            <h4>First Way</h4>
             <Exercise3 />
             <hr />
-            <h4>Exercise 4</h4>
+            <h4>Second Way</h4>
             <Exercise4 />
         </div>
     )

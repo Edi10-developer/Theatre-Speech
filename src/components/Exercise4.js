@@ -6,55 +6,48 @@ import data from '../data.json'
 
 const Exercise4 = () => {
     const [count, setCount] = useState(0)
-    const [active, setActive] = useState(null)
 
     const newSpeech = () => setCount(count => count + 1)
     const oldSpeech = () => setCount(count => count - 1)
 
-    const highLightElement = () => setActive(true)
-
-    console.log(active)
+    const isRight = false;
 
     // Style
-    const Paragraph = styled.p`background-color: red;`
     const List = styled.ul`
     list-style-type: none;
-    border: 1px solid rgba(0, 0, 0, .4);
-    padding-left: 0;
+    border:          1px solid rgba(0, 0, 0, .4);
+    padding-left:    0;
     `;
     const ListItem = styled.li`
-    border: 1px solid #ccc;
-    padding: .4rem;
-    font-weight: 500;
-    padding-left: 1rem;
-
-    :active{
-        background-color: red;
+    background-color: ${({ highLighted }) => highLighted ? '#ffa551' : 'white'};
+    border:           ${({ highLighted }) => highLighted ? '1px solid red' : '1px solid #ccc'};
+    padding:          ${({ highLighted }) => highLighted ? '.7rem' : '.4rem'};
+    font-weight:      ${({ highLighted }) => highLighted ? 500 : 600};
+    fontFamily:       ${({ highLighted }) => highLighted ? 'Droid Sans' : 'Roboto'};
+    padding-left:     1rem;
     }
     `;
 
-    const ss = {
-        backgroundColor: '#ccc',
-        fontSize: 24
-    }
     return (
         <div>
             <Button
                 title="Adelante"
-                onClick={highLightElement}
+                onClick={newSpeech}
             />
-
             <Button
                 title="Atras"
-                onClick={oldSpeech} />
+                onClick={oldSpeech}
+            />
             <List>
                 {data.map((speech, index) => {
-                    return <ListItem 
-                    key={index}
-                    style={index % index + 1 ? ss : null }
-                   // onChange={ highLightElement}
-                   // style={{color: active.color, height: active.height}}
-                    >{speech}</ListItem>
+                    return (
+                        <ListItem
+                            key={index}
+                            highLighted={index == count}
+                        >
+                            {speech}
+                        </ListItem>
+                    )
                 }
                 )}
             </List>
